@@ -1,0 +1,1 @@
+# stm32cubemx2_ism6hg256x_datalog_i2c
