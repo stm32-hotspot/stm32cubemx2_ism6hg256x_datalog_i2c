@@ -25,6 +25,7 @@
 ism6hg256x_object_t *pIsm6hg256x0; /* pointer referencing the ISM6HG256X object instance */
 ism6hg256x_axes_t accData;
 ism6hg256x_axes_t gyroData;
+ism6hg256x_axes_t accHGData;
 
 /** ########## Step 1 ##########
   * The init of ISM6HG256X is triggered by the applicative code
@@ -59,6 +60,13 @@ app_status_t app_init(void)
   }
   PRINTF("[INFO] Step 1: Enabling the GYRO feature completed\n");
 
+  /* ISM6HG256X device 0: enable the ACC High-g feature */
+  if (ism6hg256x_drv_acc_hg_enable(pIsm6hg256x0) != 0)
+  {
+    PRINTF("[ERROR] Step 1: Enabling the ACC High-g feature error\n");
+    goto _app_init_exit;
+  }
+  PRINTF("[INFO] Step 1: Enabling the ACC High-g feature completed\n");
 
   HAL_Delay(100);
   return_status = EXEC_STATUS_INIT_OK;
@@ -95,6 +103,14 @@ app_status_t app_process(void)
   PRINTF("[INFO] Step 2: GYR X=%" PRIi32 " Y=%" PRIi32 " Z=%" PRIi32 "\n", (int32_t)gyroData.x_axis,
          (int32_t)gyroData.y_axis, (int32_t)gyroData.z_axis);
 
+  /* ISM6HG256X device 0: get the High-g acceleration value and print it */
+  if (ism6hg256x_drv_acc_hg_get_axes(pIsm6hg256x0, &accHGData) != 0)
+  {
+    PRINTF("[ERROR] Step 2: Reading High-g acceleration error\n");
+    goto _app_process_exit;
+  }
+  PRINTF("[INFO] Step 2: High-g ACC X=%" PRIi32 " Y=%" PRIi32 " Z=%" PRIi32 "\n", (int32_t)accHGData.x_axis,
+         (int32_t)accHGData.y_axis, (int32_t)accHGData.z_axis);
 
   return_status = EXEC_STATUS_OK;
 

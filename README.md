@@ -1,8 +1,8 @@
 # __Example: *ism6hg256x_datalog_i2c*__
 
-How to use ISM6HG256X part API.
+How to use the ISM6HG256X part API.
 
-It illustrates it by getting the values of the accelerometer (in hg) and gyroscope (in mdps) and displaying them on a terminal.
+It illustrates it by getting the values of the accelerometer (in mg) and gyroscope (in mdps) and displaying them on a terminal.
 
 
 ## __1. Detailed scenario__
@@ -13,7 +13,7 @@ The application executes the following __example steps__:
 
 __Step 1__: Initializes and enables accelerometer and gyroscope features of ISM6HG256X
 
-__Step 2__: Gets the values of the accelerometer (in hg) and gyroscope (in mdps) and displays them on a terminal
+__Step 2__: Gets the values of the accelerometer (in mg) and gyroscope (in mdps) and displays them on a terminal
 
 __End of example__: It is an endless example that loops infinitely on step 2
 

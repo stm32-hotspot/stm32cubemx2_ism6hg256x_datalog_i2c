@@ -23,7 +23,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* @user: configure the delay in milliseconds between 2 loop rounds */
-#define EXAMPLE_LOOP_DELAY_MS 100U
+#define EXAMPLE_LOOP_DELAY_MS 1000U
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
@@ -48,8 +48,10 @@ int main(void)
   }
   else
   {
+#if defined(USE_TRACE) && USE_TRACE != 0
     /* Initialize basic_stdio separately, but after system init. */
     mx_basic_stdio_init();
+#endif /* defined(USE_TRACE) && USE_TRACE != 0 */
 
     /** Example execution: this hardware and IDE agnostic code contains the scenario that we demonstrate.
       * This is the applicative code showing how to use the peripheral (functionality-wise).
