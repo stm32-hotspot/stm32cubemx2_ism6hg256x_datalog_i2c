@@ -1,6 +1,6 @@
 # __Example: *ism6hg256x_datalog_i2c*__
 
-How to use the ISM6HG256X part API.
+How to use the ISM6HG256X part API with I2C bus.
 
 It illustrates it by getting the values of the accelerometer (in mg) and gyroscope (in mdps) and displaying them on a terminal.
 
@@ -82,7 +82,7 @@ No specific debug tips.
 
 ## __6. See Also__
 
-More information about ISM6HG256X part driver can be found in the [ISM6HG256X Part Driver](https://dev.st.com/stm32cube-docs/part-drivers-ism6hg256x/1.0.0/en/index.html)
+More information about ISM6HG256X part driver can be found in the [ISM6HG256X Part Driver](https://dev.st.com/stm32cube-docs/part-drivers-ism6hg256x/1.1.0/en/index.html)
 
 More information about the STM32 ecosystem can be found in the [STM32 MCU Developer Zone](https://www.st.com/content/st_com/en/stm32-mcu-developer-zone.html).
 
