@@ -6,15 +6,15 @@ This example demonstrates how to use the ISM6HG256X part driver with STM32CubeMX
 
 # Update history
 
-<label for="collapse-v-1-1-0" aria-hidden="true">**1.1.0 / 10-July-2026**</label>
+<label for="collapse-v-1-1-1" aria-hidden="true">**1.1.1 / 15-September-2026**</label>
 <div>
 
 
 ## Main changes
 
-### Maintenance release
+### Patch release
 
-Update the ISM6HG256X datalog_i2c example for STM32CubeMX2 v1.1.0.
+Fix the readme.
 
 ## Known limitations
 

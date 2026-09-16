@@ -60,7 +60,7 @@ This section describes the hardware setup principles that apply to any board.
   |      CN5-10     |   PB6   |  I2C1_SCL   |  ARDUINO CONNECTOR - D15   |
   |      CN5-9      |   PB7   |  I2C1_SDA   |  ARDUINO CONNECTOR - D14   |
 
-  - I2C ADDw = 0x6B (7-bit address).
+  - I2C ADDw = 0x6A (7-bit address).
 
 </details>
 
